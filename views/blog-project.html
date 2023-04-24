@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/public/css/artikel-blog.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            
+            <ul>
+                <img src="/public/images/dumbways-logo.jpg">
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li><a href="/form-project">Add Project</a></li>
+                <li><a href="/testimoni">Testimonials</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <a href="/contact">Contact Me</a>
+        </div>
+
+         <!-- hamburger -->
+        <div class="barsmenu">
+            <button style="background-color: transaparent; border: none; cursor: pointer;" onclick="openHamburger()">
+                <i class="fa-2x fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="/" class="hamburger-active">Home</a>
+        <a href="/form-project">Add Project</a>
+        <a href="/testimoni">Testimonials</a>
+        <a href="/contact">Contact Me</a>
+    </div>
+
+    <!-- hamburger close -->
+
+
+
+    <div class="container-blog">
+        <div class="title-artikel">
+            <h1>{{.Projects.TitleProject}}</h1>
+        </div>
+       
+        <div class="container-2">
+            <div class="img-artikel">
+                <img src="/public/images/panorama.png">
+            </div>
+            <div class="time">
+                <div class="durasi-project">
+                    <h3>Duration</h3>
+                    <div>
+                        <i class="fa-regular fa-calendar-days fa-xl"></i>
+                        <p>{{.Projects.FStartDate}} - {{.Projects.FEndDate}}</p>
+                    </div>
+                    
+                    <div>
+                        <i class="fa-regular fa-clock fa-xl"></i>
+                    <p>1 month</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="tehnologi">
+                    <h3>Technologies</h3>
+                    <div class="next-js">
+                        <img src="/public/images/next-js.png">
+                        <p>Next Js</p>
+                    </div>
+                    <div class="react-js">
+                        <img src="/public/images/React-icon.svg.png">
+                        <p>React Js</p>
+                    </div>
+                    <div class="node-js">
+                        <img src="/public/images/node-js.png">
+                        <p>Node Js</p>
+                    </div>
+                    <div class="typescript">
+                        <img src="/public/images/typescript.png">
+                        <p>typescript</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="artikel">
+            <p>{{.Projects.Description}}</p>
+        </div>
+    </div>
+
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+</html>
